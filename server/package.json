@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/auth.test.js tests/models.test.js tests/complaint.test.js tests/messaging_feedback.test.js tests/admin_analytics.test.js tests/security_e2e_hardening.test.js",
+    "test:auth": "node --test tests/auth.test.js",
+    "test:models": "node --test tests/models.test.js",
+    "test:complaint": "node --test tests/complaint.test.js",
+    "test:messaging_feedback": "node --test tests/messaging_feedback.test.js",
+    "test:admin": "node --test tests/admin_analytics.test.js",
+    "test:hardening": "node --test tests/security_e2e_hardening.test.js",
+    "seed:demo": "node scripts/seed-demo-data.js --confirm-demo-db"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.3",
+    "nodemailer": "^10.2.1"
+  }
+}
